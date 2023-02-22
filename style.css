@@ -1,0 +1,204 @@
+header { 
+    margin: 15px;
+    border: 7px outset #782ff0; /* dotted, dashed, solid, double, groove, ridge, inset, outset */
+    border-radius: 10px;
+    background-color: #232026;
+
+}
+.links {
+    font-size: 19px;
+    font-weight: bold;
+    display:  flex;
+    align-items: flex-start;
+    margin:  0 20px;
+    padding:  0 10px;
+    overflow-wrap: none;
+
+}
+.links p {
+    width: 20%;
+}
+.links a {
+    color : #d001b2;
+    text-decoration: none;
+}
+#writing {
+    border-radius: 7px;
+    border:  4px solid black;
+    margin: 0 15px;
+    text-align: center;
+    background-color: #232026;
+    padding: 10px 10px;
+    width: 20%;
+    transition: color .5s,  padding .5s, margin .5s, font-size .5s
+}
+
+#gaming {
+    border-radius: 7px;
+    border:  4px solid black;
+    margin: 0 15px;
+    text-align: center;
+    background-color: #232026;
+    padding: 10px 10px;
+    width: 20%;
+    transition: color .5s,  padding .5s, margin .5s, font-size .5s
+
+}
+#music {
+    border-radius: 7px;
+    border:  4px solid black;
+    margin: 0 15px;
+    text-align: center;
+    background-color: #232026;
+    padding: 10px 10px;
+    width: 20%;
+    transition: color .5s,  padding .5s, margin .5s, font-size .5s
+}
+#writing:hover {
+    color:  #9e07bd;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 21px;
+}
+#gaming:hover {
+    color:  #9e07bd;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 21px;
+}
+#music:hover {
+    color:  #9e07bd;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 21px;
+}
+body {
+    background: hsla(10, 43%, 23%, 1);
+    background: linear-gradient(90deg, hsla(10, 43%, 23%, 1) 0%, hsla(291, 80%, 14%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(10, 43%, 23%, 1) 0%, hsla(291, 80%, 14%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(10, 43%, 23%, 1) 0%, hsla(291, 80%, 14%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#532921", endColorstr="#370740", GradientType=1);
+    color: lightgray;
+    background-color: #330039;
+    font-family: Gill Sans, sans-serif;
+}
+
+li i {
+    color: ebd5f8
+}
+ul {
+    list-style-type: lower-roman;
+}
+main {
+    display: flex;
+    align-items: flex-start;
+}
+.bio { 
+    background-color: #232026;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    flex: 2
+
+}
+aside {
+    background-color: #232026;
+    text-align: left;
+    font-size: 20px;
+    margin: 15px 5px 5px 10px; /* top, right, bottom, left */
+    padding: 5px 5px 10px 5px; 
+    border: 5px outset #2faaf0;
+    border-radius: 10px;
+    flex: 1
+}
+.video {
+    display: flex;
+}
+.video_table {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 5px;
+    grid
+}
+
+a {
+    color: purple;
+}
+a:hover {
+     color: blue;
+}
+
+
+.bandcamp {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#bc {
+    position: relative;
+    top: 50px;
+    width: 200px;
+}
+#kitty {
+    margin-left: 20px;
+    position: relative;
+    float: right;
+    transition: box-shadow .5s;
+    }
+#kitty:hover {
+    box-shadow: 0px 0px 100px 10px white;
+}
+#popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid black;
+    border-radius: 10px;
+    background-color: black;
+    position: fixed;
+    top: 500px;
+    opacity:  0;
+    font-size: 55px;
+    width:  80%;
+    height: 300px;
+
+}
+#x_button {
+    position: fixed;
+    transform: translate(300px, -100px)
+}
+#popup_box {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    border: 0 solid black;
+}
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    background-color: #232026;
+    border: 3px solid gray;
+    padding: 5px
+
+}
+.song{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+th {
+    background-color: darkorchid;
+}
+

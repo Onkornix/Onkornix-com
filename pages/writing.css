@@ -1,0 +1,36 @@
+body {
+    color: lightgray;
+    background-color: #330039;
+    font-family: Gill Sans, sans-serif;
+}
+header {
+    background-color: #232026;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 10px;
+    border:  7px outset #782ff0;
+    border-radius: 7px;
+
+}
+form {
+    text-align: center;
+}
+form label {
+    font-size: 20px;
+    font-weight: bold;
+}
+.story {
+    font-size: 20px;
+    position: relative;
+    left:  10%;
+    margin-top: 50px;
+    border: 10px outset #782ff0;
+    background-color: #232026;
+    border-radius:  10px;
+    max-width:  80%;
+    min-width: 250px;
+    overflow-y: scroll;
+    
+}
+

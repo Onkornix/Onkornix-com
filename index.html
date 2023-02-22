@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<!-- page sections include: header, main, paragraph, aside, nav, div, footer -->
+
+<html>
+    <head>  
+        <link href="./style.css" rel="stylesheet">
+        <Title>My Website</Title>
+    </head> 
+  <body>
+
+    <header>
+        <h1 align="center">This is my <strong>Website!</strong></h1>  
+    </header>
+    <section class="links">
+        <p>Other Pages:</p>
+        <a id="writing" href="pages/writing.html">My writing</a>
+        <a id="gaming" href="pages/gaming.html">Clips</a>
+        <a id="music"href="pages/music.html">Music</a>
+    </section>
+    <!-- paragraph -->
+    <main >    
+        <p align='center' class='bio'>
+        Hello my name is Dylan, and I am <b>16</b> years old. 
+        I was born on decemebr <b>6th</b>, 2006 at <b>12:30pm</b>. I have lived in Eugene all of my life, 
+        but i'd like to live somehwere else sometime. My family goes to Colorado and California
+        pretty often. We usually go over the summer to visit family, and until recently we went
+        to LA every other summer to go to the <b>Hollywood Bowl</b> for the 4th of July to see 
+        the concert and the fireworks. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+        anim id est laborum.
+        </p>
+        <aside class="side">
+            <h3 align='center'>Stuff I like to do</h3>
+            <ol>
+                <li >Listen to <i>niche</i> music</li>
+                <li>Write</li>
+                <li>Use computers</li>
+                <li>Play videogames:<ul>
+                    <li style='color:#ff7800'>Dark Souls 1, 2, and 3</li>
+                    <li style='color:gray'>Skyrim</li>
+                    <li style='color:#7f181e'>Ghostrunner</li>
+                    </ul>
+                <li>Boulder and work out</li>
+                <li>Browse <a href='https://newgrounds.com'><b>Newgrounds</b></a> <i>sometimes</i>
+            </ol>
+        </aside>
+    </main>
+    <br>
+<!--
+    <h3 align="center">Some Xbox Clips</h3>
+
+    <section class="video_table">
+        <div style="width: 100%; height: 0px; position: relative; padding-bottom: 56.250%;">
+            <iframe src="https://streamable.com/e/6gy31p" frameborder="0" width="75%" height="75%" allowfullscreen style="width: 100%; height: 100%; position: absolute;">
+            </iframe>
+        </div>
+        <div style="width: 100%; height: 0px; position: relative; padding-bottom: 56.250%;">
+            <iframe src="https://streamable.com/e/8jqocx" frameborder="0" width="100%" height="100%" allowfullscreen style="width: 100%; height: 100%; position: absolute;">
+            </iframe>
+        </div>
+        <div style="width: 100%; height: 0px; position: relative; padding-bottom: 56.250%;">
+            <iframe src="https://streamable.com/e/b4qym2" frameborder="0" width="100%" height="100%" allowfullscreen style="width: 100%; height: 100%; position: absolute;">
+            </iframe>
+        </div>
+        <div style="width: 100%; height: 0px; position: relative; padding-bottom: 56.250%;">
+            <iframe src="https://streamable.com/e/a3tp6s" frameborder="0" width="100%" height="100%" allowfullscreen style="width: 100%; height: 100%; position: absolute;"> 
+            </iframe>
+        </div>
+    </section>
+-->
+    <!-- Bandcamp cat thing (image with link) -->
+    <section class='bandcamp'>
+        <p align='center' id="bc"> click the image over there &rarr; <br> to look at my <b>bandcamp profile.</b> Why? I dunno buy me something I guess. My wishlist is right there.</p>
+        <a id='kitty' href='https://bandcamp.com/onkornix/wishlist' target="_blank"> <img src="https://f4.bcbits.com/img/0029627509_41.jpg" 
+        alt='hard cat pfp' width='200px'></a>
+        
+    </section>
+    <section id="popup_box">
+        <div id='popup'>
+            <div id='popup_p'>
+                <a id='para1' href='https://bandcamp.com/onkornix/wishlist' target="_blank" style="text-decoration: none; color: white; cursor: pointer;"></a>
+            </div>
+            <p id=x_button style="cursor:  pointer;position: relativ; font-size: 10px" ><b>X</b></p>
+        </div>
+        
+    </section>
+    <script>
+            hover = false
+            const para = document.getElementById('para1')
+            const popup = document.getElementById('popup')
+            function gotHover() {
+                setTimeout(()=>{
+                    if (hover == true){return}
+                    else if (hover == false) {hover = true}
+                    console.log('hovering')
+                    para.addEventListener('mousedown', function(){ 
+                        setTimeout(()=> {para.innerHTML = 'you\'re such a bro'}, 1000
+                    )})
+                    para.innerHTML = '===> CLICK HERE NOW <==='
+                    popup.style = "opacity: 1; transition: opacity 2s"
+                }
+                , 500)
+            } 
+            function appeased() {
+                console.log('clicked')
+                hover = false
+                const popup = document.getElementById('popup')
+                popup.style = "opacity: 0; transition: opacity 1s"
+            }
+
+            document.getElementById('kitty').addEventListener('mouseover', gotHover)
+            document.getElementById('x_button').addEventListener('mousedown', appeased)
+
+        </script>
+     <!-- Tables -->
+     <div class='table'>
+        <table border="2">
+            <tr> 
+                <th colspan="3">Some of My Favorite Songs</th> <!-- column span -->
+            <tr>
+                <th>Name</th>
+                <th>Artist(s)</th>
+                <th>Genre</th>
+            </tr>
+            <tr>
+                <td class='song'><img src="https://f4.bcbits.com/img/a0809302012_16.jpg" width="100px"><br><b>Cut out to Be Clyde</b></td>
+                <td>The Peculiar Pretzelmen</td>
+                <td>Voodoo Blues</tb>                                 
+            </tr>
+            <tr>
+                <td class='song'><img src='https://f4.bcbits.com/img/a2068522807_16.jpg' width="100px"><br><b>Female Trouble</b></td>
+                <td>TOPAZ</td>
+                <td>Electronic</td>
+            </tr>
+            <tr>
+                <td class='song'><img src='https://f4.bcbits.com/img/a3554878331_16.jpg' width='100px'><br><b>Szomoru</b></td>
+                <td>Ruined x Concavenator</td>
+                <td>Minatory</td>
+            </tr>
+            <tr>
+                <td class='song'><img src="http://images.genius.com/8553b7114a42285612a52f9ba5b57c2b.1000x1000x1.jpg" width="100px"><br><b>When the Road Runs Out</b></td>
+                <td>Blonde RedHead</td>
+                <td>Aletrnative</td>
+            </tr>
+    </div>
+    </table>
+
+<!--
+    <form>
+        <input type='radio' id='click2' name='multiple'>
+        <label for='click2'>click me 2</label>
+        <br>
+        <input type='text' id='box2' placeholder='Input'>
+        <label for='box2'>Input box</label>
+        <br>
+        <textarea id='box' placeholder="input">
+        </textarea>
+        <br>
+
+        <label for='select'>select thingy</label><br>
+        <select id='select'>
+            <option>option 1</option>
+            <option>option 2</option>
+            <option>option 3</option>
+        </select> <br>
+        
+        <input type="button" value="Click Me!" id="click">
+        
+    </form>
+
+    <div class="html-codes">
+        <a href="https://htmlcolorcodes.com/">HTML color codes</a>
+    </div>
+-->
+
+  </body>
+</html>

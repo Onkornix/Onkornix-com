@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<link href="writing.css" rel="stylesheet">
+<html lang="en">
+	<head>
+		<title>My Writing</title>
+	</head>
+	<body>
+		<header> 
+			<p>Stuff I've Written</p>
+		</header>
+		<main>
+			<form>
+		        <label for='select'>Choose Story</label><br>
+	        	<select name='Writing' id='choose_story'>
+	        		<optgroup label='Short Stories'>
+	        			<option value='story0'>Story 1</option>
+	            		<option value='story2'>Story 2</option>
+	            		<option value='story4'>Story 3</option>
+	        		</optgroup>
+	        		<optgroup label='Poems'>
+	            		<option value='story5'>Poem 1</option>
+	            		<option value='story6'>Poem 2</option>
+					</optgroup>
+        		</select> <br>
+        		<input type='button' value='Display' id='get_story'>
+        	</form>
+        <section class="story">
+        	<p id=display_story></p>
+        </section>
+		</main>
+		<script src="js/storyTime.js"></script>
+	</body>
+</html>
