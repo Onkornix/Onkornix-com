@@ -120,7 +120,6 @@ aside {
     display: grid;
     grid-template-columns: repeat(2, 50%);
     grid-gap: 5px;
-    grid
 }
 
 a {
@@ -162,14 +161,25 @@ a:hover {
     position: fixed;
     top: 500px;
     opacity:  0;
-    font-size: 55px;
+    font-size: 5vw;
     width:  80%;
     height: 300px;
 
 }
+#x_button_container {
+
+}
+
 #x_button {
     position: fixed;
-    transform: translate(300px, -100px)
+    transform: translate(80%, 5vw);
+    border: 1px solid blue;
+    padding: 5px;
+    background-color: blue;
+    cursor:  pointer;
+    position: relativ; 
+    font-size: 10px
+
 }
 #popup_box {
     display:  flex;
