@@ -95,36 +95,60 @@
         const para = document.getElementById('para1')
         const popup = document.getElementById('popup')
         const exit_b = document.getElementById('x_button')
-        function gotHover() {
-            console.log(Math.round(popup.clientWidth * .8))
-            
+        function gotHover() {         
             setTimeout(()=>{
-                animation = false
+                inAnim = false
+                let pos = 0
                 if (hover == true){return}
                 else if (hover == false) {hover = true}
                 para.innerHTML = '===> CLICK HERE NOW <==='
                 para.addEventListener('mousedown', function(){ 
-                    setTimeout(()=>{para.innerHTML = 'you\'re such a bro'}, 1000
-                )})
+                    setTimeout(()=>{para.innerHTML = 'you\'re such a bro'}, 1000)})
                 popup.style = "opacity: 1; transition: opacity 2s"
                 exit_b.addEventListener('mouseover', function(){
-                    if (animation == true) {return}
-
-                    animation = true
-                    let id = null;
-                    let pos = 0
-                    clearInterval(id)
-                    id = setInterval(frame, 5)
-                    function frame() {
-                        popupWidth = popup.clientWidth * 0.95
-                        if (pos == Math.round(popupWidth)) {animation = true; clearInterval(id)}
+                    console.log(pos, inAnim)
+                    if (inAnim == true) {return}
+                    let goLeft = null;
+                    let goRight = null
+                    let popupWidth = Math.round(popup.clientWidth * 0.95)
+                    console.log("x button hover")
+                    clearInterval(goLeft)
+                    clearInterval(goRight)
+                    if (pos == 0 ){goLeft = setInterval(left, 5)}
+                    else if (pos == popupWidth){
+                         inAnim = true
+                         goRight = setInterval(right, 5)
+                         inAnim = false
+                        }
+                    function left() {
+                        
+                        if (pos == popupWidth) {
+                            console.log("went left")
+                            console.log(popupWidth, pos)
+                            inAnim == false
+                            clearInterval(goLeft)
+                            
+                        }
                         else {
                             pos++
                             exit_b.style.right = pos + "px"
-                            }
-                    }}
-                )
-            }, 500)
+                        } 
+                    }
+                    function right() {
+                        if (pos == 0) {
+                            clearInterval(goRight)
+                        }
+                        else {
+                            console.log("going right")
+                            pos--
+                            exit_b.style.right = pos + "px"
+                        }
+                    }
+                    
+                    })
+            }), 500 
+                
+            
             
         }
             
