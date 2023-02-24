@@ -15,12 +15,10 @@ function gotHover() {
             setTimeout(()=>{para.innerHTML = 'you\'re such a bro'}, 1000)})
         popup.style = "opacity: 1; transition: opacity 2s"
         exit_b.addEventListener('mouseover', function(){
-            console.log(pos, inAnim)
             if (inAnim == true) {return}
             let goLeft = null;
             let goRight = null
             let popupWidth = Math.round(popup.clientWidth - 20)
-            console.log("x button hover")
             clearInterval(goLeft)
             clearInterval(goRight)
             if (pos == 0 ){goLeft = setInterval(left, 1)}
@@ -44,7 +42,6 @@ function gotHover() {
                     clearInterval(goRight)
                 }
                 else {
-                    console.log("going right")
                     pos--
                     exit_b.style.right = pos + "px"
                 }
