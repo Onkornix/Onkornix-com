@@ -168,13 +168,13 @@ a:hover {
 }
 
 #x_button {
-    position: fixed;
-    transform: translate(80%, 5vw);
+    position: absolute;
+    right: 0;
+    bottom: 90%;
     border: 1px solid blue;
     padding: 5px;
     background-color: blue;
     cursor:  pointer;
-    position: relative; 
     font-size: 10px
 
 }
