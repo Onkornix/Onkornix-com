@@ -90,51 +90,54 @@
         </div>
     </section>
     <script>
-            hover = false
-            const para = document.getElementById('para1')
-            const popup = document.getElementById('popup')
-            const exit_b = document.getElementById('x_button')
-            function gotHover() {
-                setTimeout(()=>{
-                    if (hover == true){return}
-                    else if (hover == false) {hover = true}
-                    console.log('init popup')
-                    para.innerHTML = '===> CLICK HERE NOW <==='
-                    para.addEventListener('mousedown', function(){ 
-                        setTimeout(()=>{para.innerHTML = 'you\'re such a bro'}, 1000
-                    )})
-                    popup.style = "opacity: 1; transition: opacity 2s"
-                    exit_b.addEventListener('mouseover', trans)
-                }, 500)
-                
-            }
-            // Animation for x_button
-            function trans() {
-                console.log("hello")
-                let id = null;
-                let pos = 0
-                clearInterval(id)
-                id = setInterval(frame, 5)
-                function frame() {
-                    if (pos == 100) {clearInterval(id)}
-                    else {
-                        pos++
-                        exit_b.style.right = pos + "px"
-                    }
-                }
-            }
-            // End of animation
-             
-            function appeased() {
-                console.log('mousedown x_button')
-                hover = false
-                const popup = document.getElementById('popup')
-                popup.style = "opacity: 0; transition: opacity 1s"
-            }
-            document.getElementById('kitty').addEventListener('mouseover', gotHover)
-            document.getElementById('x_button').addEventListener('mousedown', appeased)
+        
+        hover = false
+        const para = document.getElementById('para1')
+        const popup = document.getElementById('popup')
+        const exit_b = document.getElementById('x_button')
+        function gotHover() {
+            console.log(Math.round(popup.clientWidth * .8))
+            
+            setTimeout(()=>{
+                animation = false
+                if (hover == true){return}
+                else if (hover == false) {hover = true}
+                para.innerHTML = '===> CLICK HERE NOW <==='
+                para.addEventListener('mousedown', function(){ 
+                    setTimeout(()=>{para.innerHTML = 'you\'re such a bro'}, 1000
+                )})
+                popup.style = "opacity: 1; transition: opacity 2s"
+                exit_b.addEventListener('mouseover', function(){
+                    if (animation == true) {return}
 
-        </script>
+                    animation = true
+                    let id = null;
+                    let pos = 0
+                    clearInterval(id)
+                    id = setInterval(frame, 5)
+                    function frame() {
+                        popupWidth = popup.clientWidth * 0.95
+                        if (pos == Math.round(popupWidth)) {animation = true; clearInterval(id)}
+                        else {
+                            pos++
+                            exit_b.style.right = pos + "px"
+                            }
+                    }}
+                )
+            }, 500)
+            
+        }
+            
+        function appeased() {
+            hover = false
+            setTimeout(()=>{exit_b.style.right = "0px"}, 1100)
+            popup.style = "opacity: 0; transition: opacity 1s"
+            
+        }
+        document.getElementById('kitty').addEventListener('mouseover', gotHover)
+        document.getElementById('x_button').addEventListener('mousedown', appeased)
+
+    </script>
      <!-- Tables -->
      <div class='table'>
         <table border="2">
