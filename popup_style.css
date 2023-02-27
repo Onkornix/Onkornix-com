@@ -1,0 +1,38 @@
+#popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid black;
+    border-radius: 10px;
+    background-color: rgb(47, 47, 47);
+    box-shadow: 5px 5px 20px 7px black inset;
+    position: fixed;
+    top: 500px;
+    opacity:  0;
+    font-size: 5vw;
+    width:  80%;
+    height: 300px;
+    font-family: Impact;
+    user-select: disabled;
+}
+
+#x_button {
+    position: absolute;
+    right: 1%;
+    bottom: 80%;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    padding: 5px 7px;
+    background-color: rgba(255, 255, 255, 0);
+    cursor:  pointer;
+    font-size: 20px;
+    font-family: 'Gill Sans';
+    color: rgb(255, 255, 255)
+
+}
+#popup_box {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    border: 0 solid black;
+}

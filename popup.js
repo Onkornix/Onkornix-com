@@ -18,7 +18,7 @@ function gotHover() {
             if (inAnim == true) {return}
             let goLeft = null;
             let goRight = null
-            let popupWidth = Math.round(popup.clientWidth - 20)
+            let popupWidth = Math.round(popup.clientWidth - 35)
             clearInterval(goLeft)
             clearInterval(goRight)
             if (pos == 0 ){goLeft = setInterval(left, 1)}
