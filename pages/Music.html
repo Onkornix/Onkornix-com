@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Pong</title>
+        <link href="./music_style.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <section>
+
+                <div id="ball"></div>
+                <script>
+                    const ball = document.getElementById('ball')
+                    
+
+
+                    ball.addEventListener('mousedown', () =>{
+                        console.log('clicked')
+                        let x = null
+                        let y = null
+                        let move = null
+                        clearInterval(move)
+                        move = setInterval(moveFunc, 5)
+                        function moveFunc(){
+                            console.log('funcin')
+                            clearInterval(move)
+                        }
+                    })
+                </script>
+            </section>
+        </main>
+
+
+
+    </body>
+
+
+
+
+
+
+
+</html>
