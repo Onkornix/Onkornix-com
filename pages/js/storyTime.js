@@ -1,4 +1,4 @@
-var ID = document.getElementById('display_story');
+/*var ID = document.getElementById('display_story');
 const get_story_btn = document.querySelector('#get_story')
 const story_index = document.querySelector('#choose_story')
 get_story_btn.onclick = function () {
@@ -173,3 +173,4 @@ The path is rocky and uneven. Under this weight I feel my bones splinter and bre
 	}
 	
 }
+*/
