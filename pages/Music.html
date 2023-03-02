@@ -12,28 +12,29 @@
                 <div id="ball"></div>
                 <script>
                     var max = {
-                        "xmax": 225,
+                        "xmax": 212,
                         "xmin": -225,
-                        "xmax": 225,
+                        "ymax": 212,
                         "ymin": -225
                     }
                     const ball = document.getElementById('ball')
+                    
                     ball.addEventListener('mousedown', () =>{
-                        console.log('clicked')
                         let x = null
                         let y = null
                         let move = null
-                        clearInterval(move)
-                        move = setInterval(moveFunc, 1)
-                        function moveFunc(){
-                            console.log(x)
-                            x++
-                            y++
-                            ball.style.transform = `translate(${x}px,${y}px)`
-                            console.log()
-                            if (x == max["xmax"]){
+                        move = setInterval(moveFunc, 6, /*rise*/0, /*run*/1)
+                        function moveFunc(rise,run){
+                            //console.log(rise,run)
+                            console.log(`(${x},${y})`)
+                            y=y+rise
+                            x=x+run
+                            console.log(`(${x},${y})`) 
+                            ball.style.transform = `translate(${x}px,-${y}px)`
+                            if (x >= max["xmax"] || y >= max["ymax"] - rise){
                                 clearInterval(move)
                             }
+
                         }
                     })
 
