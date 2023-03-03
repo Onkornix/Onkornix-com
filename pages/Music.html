@@ -11,20 +11,25 @@
 
                 <div id="ball"></div>
                 <script>
-
                     const ball = document.getElementById('ball')
                     ball.addEventListener('mousedown', () =>{
                         let x = null
                         let y = null
                         let move = null
-                        move = setInterval(moveFunc, 10, /*-rise*/-3, /*run*/0)
+                        move = setInterval(moveFunc, 10, /*-rise*/4, /*run*/2)
                         function moveFunc(rise,run){
-                            let runOffset = run
-                            let riseOffset = rise
-                            if (rise / -rise == -1){sireOffset= rise*(-1)}
-                            else if (run / -run == -1) {runOffset = run*(-1)}
-                            if (x >= 213 - runOffset || x <= -213 + runOffset || y >= 213 + riseOffset || y <= -213 + riseOffset){
+                            if (x >= 213 - run || x <= -213 - run || y >= 213 + rise || y <= -213 + rise){
+                                console.log(rise/ -rise)
+                                /*switch (rise / (-rise)) {
+                                    case -1: //rise is positive
+                                        console.log('hello')
+                                        break;
+                                    case 1: //rise is negative
+                                        console.log('hello1')
+                                        break
+                                }*/
                                 clearInterval(move)
+                                //setInterval(moveFunc, 10, rise, run)
                                 return
                             }
                             y=y-rise
