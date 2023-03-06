@@ -16,31 +16,45 @@
                         let x = null
                         let y = null
                         let move = null
-                        move = setInterval(moveFunc, 10, /*-rise*/4, /*run*/2)
+                        move = setInterval(moveFunc, 10, /*-rise*/3, /*run*/1)
                         function moveFunc(rise,run){
                             if (x >= 213 - run || x <= -213 - run || y >= 213 + rise || y <= -213 + rise){
-                                console.log(rise/ -rise)
-                                /*switch (rise / (-rise)) {
-                                    case -1: //rise is positive
-                                        console.log('hello')
+                                console.log(x,y)
+                                walls = checkWall(x,y)
+                                switch (rise > 0) {
+                                    case true: 
+                                        rise = -rise
                                         break;
-                                    case 1: //rise is negative
-                                        console.log('hello1')
+                                    case false: 
+                                        rise = -rise
                                         break
-                                }*/
+                                }
+                                switch (run > 0){
+                                    case true: 
+                                        run = -run
+                                        break;
+                                    case false:
+                                        run = -run
+                                        break;
+                                }
+                                console.log(rise, run)
+                                setInterval(moveFunc, 10, rise, run)
                                 clearInterval(move)
-                                //setInterval(moveFunc, 10, rise, run)
                                 return
                             }
                             y=y-rise
                             x=x+run
                             ball.style.transform = `translate(${x}px,${y}px)`
-                             console.log(`(${x},(-)${y})`)
+                            console.log(`(${x},(-)${y})`)
 
                         }
                     })
-
-                
+                    function checkWall(xIn, yIn){
+                        switch (x >= 213) {
+                            case true: 
+                                console.log('right wall')
+                        }
+                    }
                 </script>
             </section>
         </main>
