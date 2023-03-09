@@ -1,3 +1,5 @@
+
+
 const ball = document.getElementById('ball')
 ball.addEventListener('mousedown', () =>{
     let x = null
@@ -7,14 +9,14 @@ ball.addEventListener('mousedown', () =>{
     function moveFunc(rise,run){
         if (x >= 213 - run || x <= -213 - run || y >= 213 + rise || y <= -213 + rise){
             console.log(x,y)
-            walls = checkWall(x,y)
+            /*
             switch (rise > 0) {
                 case true: 
                     rise = -rise
                     break;
                 case false: 
                     rise = -rise
-                    break
+                    break;
             }
             switch (run > 0){
                 case true: 
@@ -24,8 +26,9 @@ ball.addEventListener('mousedown', () =>{
                     run = -run
                     break;
             }
+            */
             console.log(rise, run)
-            setInterval(moveFunc, 10, rise, run)
+            //setInterval(moveFunc, 10, rise, run)
             clearInterval(move)
             return
         }
@@ -36,9 +39,3 @@ ball.addEventListener('mousedown', () =>{
 
     }
 })
-function checkWall(xIn, yIn){
-    switch (x >= 213) {
-        case true: 
-            console.log('right wall')
-    }
-}

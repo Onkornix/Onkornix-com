@@ -2,16 +2,42 @@
 
 <html>
     <head>
-        <title>Pong</title>
+        <title id="jsPong">Pong</title>
         <link href="./music_style.css" rel="stylesheet">
     </head>
     <body>
+        <header>
+            <p><b>Javascript Pong</b></p>
+            
+        </header>
         <main>
             <section>
-
                 <div id="ball"></div>
                 <script src="./pong.js"></script> 
+                <div id="paddleLeft"></div>
+                <div id="paddleRight"></div>
+                <script>
+                    const paddle = document.getElementById('paddleLeft')
+                    let x = null
+                    document.addEventListener('keydown', (event) => {
+                        switch (event.key) {
+                            case 'w':
+                                console.log('up', x)
+                                x++
+                                paddle.style.bottom = x + 'px'
+                                break
+                            case 's':
+                                console.log('down')
+                                break
+                        }
+
+                        
+                    }, false)
+
+
+                </script>
             </section>
+            
         </main>
 
 
