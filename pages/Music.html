@@ -22,15 +22,17 @@
                     document.addEventListener('keydown', (event) => {
                         switch (event.key) {
                             case 'w':
-                                console.log('up', x)
+                                console.log(x*10)
                                 x++
-                                paddle.style.bottom = x + 'px'
+                                
                                 break
                             case 's':
-                                console.log('down')
+                                console.log(x*10)
+                                x--
+
                                 break
                         }
-
+                        paddle.style.top = x * 10 + 'px'
                         
                     }, false)
 
