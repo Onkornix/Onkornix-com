@@ -16,57 +16,7 @@
                 <script src="./pong.js"></script> 
                 <div id="paddleLeft"></div>
                 <div id="paddleRight"></div>
-                <script>
-<<<<<<< HEAD
-                    const ball = document.getElementById('ball')
-                    ball.addEventListener('mousedown', () =>{
-                        let x = null
-                        let y = null
-                        let move = null
-                        move = setInterval(moveFunc, 10, /*-rise*/-4, /*run*/2)
-                        function moveFunc(rise,run){
-                            if (x >= 213 - run || x <= -213 - run || y >= 213 + rise || y <= -213 + rise){
-                                console.log(rise / -rise)
-                                switch (rise * -2) {
-                                    case -1: //rise is positive
-                                        console.log('hello')
-                                        break;
-                                    case 1: //rise is negative
-                                        console.log('hello1')
-                                        break
-                                }
-                                clearInterval(move)
-                                //setInterval(moveFunc, 10, rise, run)
-                                return
-                            }
-                            y=y-rise
-                            x=x+run
-                            ball.style.transform = `translate(${x}px,${y}px)`
-                             console.log(`(${x},(-)${y})`)
-
-=======
-                    const paddle = document.getElementById('paddleLeft')
-                    let x = null
-                    document.addEventListener('keydown', (event) => {
-                        switch (event.key) {
-                            case 'w':
-                                console.log(x*10)
-                                x++
-                                
-                                break
-                            case 's':
-                                console.log(x*10)
-                                x--
-
-                                break
->>>>>>> 4c7ff65adb3fdb6009864c5409e48aeb13ab65c4
-                        }
-                        paddle.style.top = x * 10 + 'px'
-                        
-                    }, false)
-
-
-                </script>
+                <script></script>
             </section>
             
         </main>
